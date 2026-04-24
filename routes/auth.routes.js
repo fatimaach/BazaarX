@@ -119,7 +119,7 @@ router.post('/login', async (req, res) => {
       tenantId: user.tenant_id
     };
 
-    const token = jwt.sign(payload, getJwtSecret(), { expiresIn: '8h' });
+    const token = jwt.sign(payload, getJwtSecret(), { expiresIn: '15m' });
 
     return res.json({
       message: 'Login successful',
