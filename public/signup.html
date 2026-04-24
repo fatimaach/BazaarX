@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up | BazaarX</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="auth">
+    <div class="bg-orbs" aria-hidden="true">
+      <span class="orb orb-1"></span>
+      <span class="orb orb-2"></span>
+      <span class="orb orb-3"></span>
+    </div>
+
+    <main class="auth-wrapper">
+      <section class="auth-card glass">
+        <a class="logo" href="index.html">BazaarX</a>
+        <h1>Create your account</h1>
+        <p class="muted">Join the multi-tenant marketplace in minutes.</p>
+
+        <form id="signup-form">
+          <label>
+            Full Name
+            <input type="text" name="name" placeholder="Ayesha Khan" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@email.com" required />
+          </label>
+          <label>
+            Password
+            <input type="password" name="password" placeholder="********" required />
+          </label>
+          <label>
+            Role
+            <select name="role" id="signup-role" required>
+              <option value="ADMIN">ADMIN</option>
+              <option value="SELLER">SELLER</option>
+              <option value="CUSTOMER">CUSTOMER</option>
+            </select>
+          </label>
+          <div id="tenant-field">
+            <label>
+              Tenant ID
+              <input
+                type="text"
+                name="tenantId"
+                id="signup-tenant"
+                placeholder="electronics"
+              />
+              <span class="helper" id="tenant-helper">Required for SELLER</span>
+            </label>
+          </div>
+          <button class="primary" type="submit" id="signup-submit">Sign Up</button>
+          <p class="form-message" id="signup-message"></p>
+        </form>
+
+        <p class="muted">
+          Already have an account? <a href="login.html">Log in</a>
+        </p>
+      </section>
+    </main>
+
+    <script src="auth.js"></script>
+  </body>
+</html>

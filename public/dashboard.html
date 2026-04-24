@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | BazaarX</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="dashboard">
+    <div class="bg-orbs" aria-hidden="true">
+      <span class="orb orb-1"></span>
+      <span class="orb orb-2"></span>
+      <span class="orb orb-3"></span>
+    </div>
+
+    <div class="dashboard-layout">
+      <aside class="sidebar glass">
+        <div>
+          <a class="logo" href="index.html">BazaarX</a>
+          <nav class="sidebar-links">
+            <a href="#overview">Overview</a>
+            <a href="#actions">Actions</a>
+            <a href="#products">Products</a>
+          </nav>
+        </div>
+        <button class="secondary" id="logout-btn">Logout</button>
+      </aside>
+
+      <main class="dashboard-main">
+        <header class="topbar glass">
+          <div>
+            <p class="muted">Welcome back</p>
+            <h1 id="user-name">User</h1>
+          </div>
+          <div class="topbar-meta">
+            <span class="pill">Role: <strong id="user-role">ROLE</strong></span>
+            <span class="pill" id="user-tenant">Tenant: -</span>
+          </div>
+        </header>
+
+        <section class="grid-cards" id="overview">
+          <div class="glass card">
+            <h3>Tenant Isolation</h3>
+            <p>Requests are scoped with JWT + tenant headers.</p>
+          </div>
+          <div class="glass card">
+            <h3>Schema Provisioning</h3>
+            <p>Every tenant gets its own product schema.</p>
+          </div>
+          <div class="glass card">
+            <h3>Role-Based Access</h3>
+            <p>ADMIN, SELLER, CUSTOMER permissions enforced.</p>
+          </div>
+        </section>
+
+        <section class="actions" id="actions">
+          <div class="glass panel" id="admin-panel">
+            <h2>Create Tenant</h2>
+            <p class="muted">Admins can onboard new businesses.</p>
+            <form id="tenant-form">
+              <label>
+                Tenant Name
+                <input type="text" name="name" placeholder="Electronics Store" required />
+              </label>
+              <label>
+                Tenant ID
+                <input type="text" name="tenantId" placeholder="electronics" required />
+              </label>
+              <button class="primary" type="submit" id="tenant-submit">Create Tenant</button>
+              <p class="form-message" id="tenant-message"></p>
+            </form>
+          </div>
+
+          <div class="glass panel" id="seller-panel">
+            <h2>Add Product</h2>
+            <p class="muted">Sellers add products to their tenant schema.</p>
+            <form id="product-form">
+              <label>
+                Product Name
+                <input type="text" name="name" placeholder="iPhone 15" required />
+              </label>
+              <label>
+                Price
+                <input type="number" name="price" placeholder="250000" required />
+              </label>
+              <label>
+                Stock
+                <input type="number" name="stock" placeholder="10" required />
+              </label>
+              <button class="primary" type="submit" id="product-submit">Add Product</button>
+              <p class="form-message" id="product-message"></p>
+            </form>
+          </div>
+        </section>
+
+        <section class="glass panel" id="products">
+          <h2>Products</h2>
+          <p class="muted">Customer and sellers can browse products.</p>
+          <p class="helper">
+            Enter a tenant ID such as electronics, clothing, or bags to browse that store’s products.
+          </p>
+          <div class="product-controls">
+            <input type="text" id="products-tenant" placeholder="Tenant ID" />
+            <button class="secondary" id="products-submit">Get Products</button>
+            <button class="secondary danger" id="tenant-delete" type="button">Delete Tenant</button>
+            <span class="loader" id="products-loader">Loading...</span>
+          </div>
+          <p class="form-message" id="products-message"></p>
+          <div class="product-grid" id="product-grid"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>

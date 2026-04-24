@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | BazaarX</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="auth">
+    <div class="bg-orbs" aria-hidden="true">
+      <span class="orb orb-1"></span>
+      <span class="orb orb-2"></span>
+      <span class="orb orb-3"></span>
+    </div>
+
+    <main class="auth-wrapper">
+      <section class="auth-card glass">
+        <a class="logo" href="index.html">BazaarX</a>
+        <h1>Welcome back</h1>
+        <p class="muted">Log in to manage your tenant dashboard.</p>
+
+        <form id="login-form">
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@email.com" required />
+          </label>
+          <label>
+            Password
+            <input type="password" name="password" placeholder="********" required />
+          </label>
+          <button class="primary" type="submit" id="login-submit">Login</button>
+          <p class="form-message" id="login-message"></p>
+        </form>
+
+        <p class="muted">
+          Need an account? <a href="signup.html">Sign up</a>
+        </p>
+      </section>
+    </main>
+
+    <script src="auth.js"></script>
+  </body>
+</html>

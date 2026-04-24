@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BazaarX Marketplace</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="landing">
+    <div class="bg-orbs" aria-hidden="true">
+      <span class="orb orb-1"></span>
+      <span class="orb orb-2"></span>
+      <span class="orb orb-3"></span>
+    </div>
+
+    <header class="landing-hero">
+      <nav class="nav">
+        <div class="logo">BazaarX</div>
+        <div class="nav-actions">
+          <a class="ghost-link" href="signup.html">Create Account</a>
+          <a class="pill-link" href="login.html">Login</a>
+        </div>
+      </nav>
+
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">Modern Daraz-inspired marketplace</p>
+          <h1 class="hero-title">BazaarX</h1>
+          <p class="tagline hero-subtitle">One Platform, Multiple Businesses</p>
+          <p class="description">
+            A multi-tenant SaaS marketplace where different businesses sell
+            products using separate schemas inside one shared database.
+          </p>
+          <div class="cta-group hero-cta">
+            <a class="primary" href="signup.html">Create Tenant Account</a>
+            <a class="secondary" href="login.html">View Dashboard</a>
+          </div>
+        </div>
+        <div class="hero-card glass hero-float">
+          <h3>Marketplace Pulse</h3>
+          <p class="muted">Shared database. Separate schemas. Isolated tenants.</p>
+          <div class="hero-stats">
+            <div>
+              <span class="stat-label">Live tenants</span>
+              <strong>24+</strong>
+            </div>
+            <div>
+              <span class="stat-label">Avg setup time</span>
+              <strong>2 min</strong>
+            </div>
+          </div>
+          <div class="hero-graph">
+            <div class="bar" style="--height: 30%"></div>
+            <div class="bar" style="--height: 65%"></div>
+            <div class="bar" style="--height: 55%"></div>
+            <div class="bar" style="--height: 80%"></div>
+            <div class="bar" style="--height: 42%"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="stats-grid">
+      <div class="stat-card glass reveal">
+        <h3>Shared Database</h3>
+        <p>Centralized PostgreSQL backbone for every tenant.</p>
+      </div>
+      <div class="stat-card glass reveal">
+        <h3>Separate Schemas</h3>
+        <p>Each business lives in its own isolated schema.</p>
+      </div>
+      <div class="stat-card glass reveal">
+        <h3>Tenant Isolation</h3>
+        <p>Strict separation with role-based access control.</p>
+      </div>
+      <div class="stat-card glass reveal">
+        <h3>Scalable Marketplace</h3>
+        <p>Onboard tenants without touching infrastructure.</p>
+      </div>
+    </section>
+
+    <section class="how-it-works glass">
+      <div class="section-header">
+        <h2>How it works</h2>
+        <p>Every tenant is provisioned in four quick steps.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal">
+          <span>Step 1</span>
+          <h4>Tenant created</h4>
+          <p>Admins register a new business in seconds.</p>
+        </div>
+        <div class="step reveal">
+          <span>Step 2</span>
+          <h4>Schema generated</h4>
+          <p>PostgreSQL spins up a dedicated schema.</p>
+        </div>
+        <div class="step reveal">
+          <span>Step 3</span>
+          <h4>Products stored</h4>
+          <p>Listings live inside the tenant schema.</p>
+        </div>
+        <div class="step reveal">
+          <span>Step 4</span>
+          <h4>Isolation enforced</h4>
+          <p>JWT + RBAC keeps data scoped per tenant.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Ready to launch your marketplace?</p>
+      <a class="pill-link" href="signup.html">Get Started</a>
+    </footer>
+    <script src="landing.js"></script>
+  </body>
+</html>
